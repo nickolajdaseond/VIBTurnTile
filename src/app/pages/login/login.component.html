@@ -1,0 +1,31 @@
+<div class="outer" [ngClass]="{isMobile}">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3 class="font-weight-bold">LOGIN</h3>
+    </div>
+      <form class="mat-card" [formGroup]="loginForm" (ngSubmit)="login()" >
+        <div class="input-container">
+          <span class="material-icons">supervised_user_circle</span>
+            <mat-form-field class="input-field">
+              <mat-label class="p-3">username</mat-label>
+                <input  matInput placeholder="username" type="text" formControlName="email"  >
+                  <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="input-container">
+          <span class="material-icons">lock</span>
+            <mat-form-field class="intup-field">
+              <mat-label class="p-3">Password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" >
+                  <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </span>
+
+             </mat-form-field>
+        </div>
+        <div class="login-button-row">
+          <button mat-button (click)="onSubmit()" color="primary">Login</button>
+        </div>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+.outer {
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  display: flex;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  color: #b6a6a6;
+  margin-top: 80px;
+  background-color:rgb(248, 248, 248) ;
+  border-radius: 10px;
+  width: 340px;
+  height: 500px;
+}
+
+.font-weight-bold{
+  color: black;
+  font-family: fantasy;
+  font-size: 30px;
+}
+
+::ng-deep .mat-mdc-button:not(:disabled) {
+  color: #fff;
+  width: 310px;
+  height: 50px;
+  margin-left: 2px ;
+  border-radius: 25px;
+  background: hsla(55, 77%, 60%, 1);
+  background: hsla(301, 77%, 60%, 1);
+  background: linear-gradient(45deg, hsla(301, 77%, 60%, 1) 6%, hsla(293, 55%, 47%, 1) 30%, hsla(269, 83%, 46%, 1) 100%);
+  background: -moz-linear-gradient(45deg, hsla(301, 77%, 60%, 1) 6%, hsla(293, 55%, 47%, 1) 30%, hsla(269, 83%, 46%, 1) 100%);
+  background: -webkit-linear-gradient(45deg, hsla(301, 77%, 60%, 1) 6%, hsla(293, 55%, 47%, 1) 30%, hsla(269, 83%, 46%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E84AE5", endColorstr="#AA36BA", GradientType=1 );
+}
+::ng-deep .mat-mdc-button.mat-primary {
+  --mdc-text-button-label-text-color: #ffffff;
+}
+
+span.material-icons{
+  position: absolute;
+  padding-top: 17px;
+    padding-left: 5px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+  background-color: transparent;
+  margin:auto;
+  margin-left: 5px;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
+  width: 300px;
+}
+
+.p-3{
+  margin-left: 32px;
+}
+
+::ng-deep .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input{
+  margin-left: 25px;
+}
+::ng-deep .mat-mdc-form-field-flex{
+  width: 98%;
+}
